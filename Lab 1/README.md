@@ -56,6 +56,8 @@ For your masterwork, reconstruct the interaction as a scene:
 
 [Storyboards](storyboards.jpg)
 
+[Idea Development](development.jpg)
+
 **Summarize the feedback you got here.**
 
 ## Part B. Act out the Interaction
