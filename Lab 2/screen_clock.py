@@ -61,11 +61,31 @@ backlight.switch_to_output()
 backlight.value = True
 
 while True:
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=400)
+    # Clear the screen
+    draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
 
-    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    # Get current date and time
+    current_time = time.strftime("%m/%d/%Y %H:%M:%S")
 
-    # Display image.
+    # Find size of text so we can center it
+    bbox = draw.textbbox((0, 0), current_time, font=font)
+    text_width = bbox[2] - bbox[0]
+    text_height = bbox[3] - bbox[1]
+
+    # Center text on screen
+    text_x = (width - text_width) // 2
+    text_y = (height - text_height) // 2
+
+    # Draw the time in white
+    draw.text(
+        (text_x, text_y),
+        current_time,
+        font=font,
+        fill=(255, 255, 255)
+    )
+
+    # Send image to Mini PiTFT
     disp.image(image, rotation)
+
+    # Update once per second
     time.sleep(1)
