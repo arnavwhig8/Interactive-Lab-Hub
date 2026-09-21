@@ -1,5 +1,4 @@
 # Interactive Prototyping: The Clock of Pi
-**NAMES OF COLLABORATORS HERE**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -8,7 +7,8 @@ For our first Pi project, we will pay homage to the [timekeeping devices of old]
 It is worth spending a little time thinking about how you mark time, and what would be useful in a clock of your own design.
 
 **Please indicate anyone you collaborated with on this Lab here.**
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+
+Shifen Hong helped me debug something during the setup of the Raspberry PI
 
 ## Prep
 
@@ -158,6 +158,11 @@ You can look in `image.py` for an example of how to display an image on the scre
 
 \*\*\***Include a picture of your own Raspberry Pi displaying the piscreen.service with your unique MAC address. Additionally, please provide another picture showing the successful completion of the screen test.**\*\*\*
 
+<img width="4032" height="3024" alt="7AC0C2AB-BCA6-42AB-A86D-5D81BEA3015A" src="https://github.com/user-attachments/assets/0e79ccff-136a-4d75-97a9-fcedbcf3341a" />
+<img width="4032" height="3024" alt="EE1AF552-DAAC-4170-87F0-B5929BE0D45F" src="https://github.com/user-attachments/assets/866e1911-4ad5-4fee-8f87-437048a24194" />
+<img width="3024" height="4032" alt="2735158A-A9C0-4F26-A090-4D131E7BC728" src="https://github.com/user-attachments/assets/f9dd0534-d5f1-48bf-b631-609054e8c1e5" />
+<img width="3024" height="4032" alt="A57F505C-26E2-4100-BEFB-421AC0D94901" src="https://github.com/user-attachments/assets/da32e833-570a-4441-bbd0-54f642d08094" />
+
 
 ## Part D. 
 ### Set up the Display Clock Demo
@@ -194,9 +199,12 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
 
+<img width="1173" height="1341" alt="ideadraw" src="https://github.com/user-attachments/assets/56d94ecd-ae57-410c-baad-9b9ea0695053" />
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
+Shifen Hong
+Rohil Saraf
 
 # Lab 2 Part 2
 
@@ -206,6 +214,8 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
 **Put the feedback for your ideas here.**
+
+The primary feedback I got summarized was that I need to add more features and make sure that at every point of the day there is a way I can tell time for example even during class time page, the overall time should be visible which I have represented using different screens that you can iterate through using the buttons and checking completeness of the day.
 
 ## Update your Lab Hub
 
@@ -233,18 +243,11 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 ## Now, make your own PiClock
 
-Do take advantage of having done the previous iteration to refine and simplify your design.
+My PiClock is a personal reminder and daily-routine clock built with a Raspberry Pi and Adafruit Mini PiTFT. Instead of only displaying the current time, it interprets time in relation to my day. It shows upcoming classes, class countdowns and progress, hydration reminders, sleep/wind-down reminders, and a visual representation of how much of the day has passed. The display changes colors and screens depending on the current activity, and the PiTFT buttons allow me to log water, acknowledge reminders, snooze alerts, and switch between different information screens.
 
-** Insert any updates ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf))!, storyboards for your ideas **
-
-
-\*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
-
-\*\*\***Take a video of your PiClock.**\*\*\*
+Watch the video here - https://youtube.com/shorts/aMNg9dMVBkE?feature=share
 
 
-As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
-
-You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab.  Make sure the page for the group turn in is linked to your personal Interactive Lab Hub page. 
+I used ChatGPT to help brainstorm the reminder-clock concept, organize features, troubleshoot Raspberry Pi/PiTFT GPIO and display issues, and assist with writing and debugging Python code. I tested and modified the generated code on my Raspberry Pi and made design decisions about the schedule, reminder behavior, interactions, visual layout, colors, animations, and final functionality myself.
 
 
