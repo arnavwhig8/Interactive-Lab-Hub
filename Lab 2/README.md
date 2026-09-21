@@ -231,7 +231,10 @@ Start small, pick just one element of your overall idea, just to show you have a
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
-## Make a short video of your modified barebones PiClock
+
+
+https://github.com/user-attachments/assets/8ed131da-344b-45a4-a04b-6b50485d2037
+
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
 
