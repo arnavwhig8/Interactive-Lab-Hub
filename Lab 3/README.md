@@ -171,6 +171,8 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 
 \*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
 
+After trying both I realized this variable is probably very important because with cutoff at only 0.2 I was id sentence and about to start saying something else that wasn't picked up while the other 1.5s cutoff was enough to get all my speech it was recording for much longer then I hoped. Depending on context there is probably a favorable cutoff.
+
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
 ### The complete loop
