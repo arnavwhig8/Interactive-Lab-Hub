@@ -111,6 +111,8 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
 
+No the greeting sounds very different. The classic engines have very robotic voices which sound like they are pronouncing a word at a time in different breaths with no continuity. The Neural TTS with Piper model is a lot better making it sound a lot less robotic and a lot more natural. 
+
 ## B. Speech to Text
 
 We use [faster-whisper](https://github.com/SYSTRAN/faster-whisper), a reimplementation of OpenAI's Whisper model that runs several times faster on CPU and does not require PyTorch. All processing happens on the Pi; nothing is sent to a server.
