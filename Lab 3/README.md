@@ -133,6 +133,22 @@ Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. 
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
 
+## Speech-to-Text Model Comparison
+
+I recorded a 5-second audio clip saying, "Hello, check one, two," and transcribed it using three different Whisper model sizes.
+
+| Model      | Transcript               | Transcription Time | Real-Time Factor |
+| ---------- | ------------------------ | -----------------: | ---------------: |
+| `tiny.en`  | "Hello check one do."    |             0.89 s |            0.18x |
+| `base.en`  | "Hello, check 1-2."      |             1.84 s |            0.37x |
+| `small.en` | "Hello, check one, two." |             5.22 s |            1.04x |
+
+The `tiny.en` model was the fastest, with a real-time factor of `0.18x`, but it incorrectly transcribed "two" as "do." The `base.en` model was more accurate and still relatively fast, with a real-time factor of `0.37x`. It transcribed the phrase as "Hello, check 1-2," which preserved the meaning correctly.
+
+The `small.en` model produced the most accurate transcription, exactly recognizing "Hello, check one, two." However, its real-time factor was `1.04x`, meaning it took slightly longer to transcribe the audio than the duration of the audio itself.
+
+For an interactive system that needs to respond quickly, I think `base.en` gives the best balance between accuracy and speed for this example. The accuracy improvement from `base.en` to `small.en` was relatively small, while the transcription time increased from 1.84 seconds to 5.22 seconds. For a conversational system, that extra delay could make the interaction feel noticeably slower.
+
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
 
 ## C. Turn-taking: knowing when someone has stopped talking
