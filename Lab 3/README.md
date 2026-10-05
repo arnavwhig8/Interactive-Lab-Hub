@@ -1,95 +1,40 @@
 # Chatterboxes
 
-Arnav Whig 
-
-Shifen Hong
-
+Shifeng Hong (sh2769)
+Arnav Whig (aw966)
 
 # Part 1
 
-## Setup
-
-Done
-
 ## A. Text to Speech
 
-Done
-
-\*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
-(This shell file should be saved to your own repo for this lab.)
-
-\*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
-
-No the greeting sounds very different. The classic engines have very robotic voices which sound like they are pronouncing a word at a time in different breaths with no continuity. The Neural TTS with Piper model is a lot better making it sound a lot less robotic and a lot more natural. 
+> The neural TTS captures the "!", wth a upswinging tone, while the classic greet names with plain tone.
 
 ## B. Speech to Text
 
-Done
+<img width="952" height="788" alt="image" src="https://github.com/user-attachments/assets/fb63feb0-6398-4f08-b8c9-dc403d6fc9b3" />
+> **base.en** balance between delay and accuracy. For a system that has to answer you, missing a comma wouldn't be issue.
 
-\*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
-
-## Speech-to-Text Model Comparison
-
-I recorded a 5-second audio clip saying, "Hello, check one, two," and transcribed it using three different Whisper model sizes.
-
-| Model      | Transcript               | Transcription Time | Real-Time Factor |
-| ---------- | ------------------------ | -----------------: | ---------------: |
-| `tiny.en`  | "Hello check one do."    |             0.89 s |            0.18x |
-| `base.en`  | "Hello, check 1-2."      |             1.84 s |            0.37x |
-| `small.en` | "Hello, check one, two." |             5.22 s |            1.04x |
-
-The `tiny.en` model was the fastest, with a real-time factor of `0.18x`, but it incorrectly transcribed "two" as "do." The `base.en` model was more accurate and still relatively fast, with a real-time factor of `0.37x`. It transcribed the phrase as "Hello, check 1-2," which preserved the meaning correctly.
-
-The `small.en` model produced the most accurate transcription, exactly recognizing "Hello, check one, two." However, its real-time factor was `1.04x`, meaning it took slightly longer to transcribe the audio than the duration of the audio itself.
-
-For an interactive system that needs to respond quickly, I think `base.en` gives the best balance between accuracy and speed for this example. The accuracy improvement from `base.en` to `small.en` was relatively small, while the transcription time increased from 1.84 seconds to 5.22 seconds. For a conversational system, that extra delay could make the interaction feel noticeably slower.
-
-\*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
-
-Done
-
+[ask_number](speech-scripts/ask_number.sh)
 ## C. Turn-taking: knowing when someone has stopped talking
 
-Done
-
-\*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
-
-After trying both I realized this variable is probably very important because with cutoff at only 0.2 I was id sentence and about to start saying something else that wasn't picked up while the other 1.5s cutoff was enough to get all my speech it was recording for much longer then I hoped. Depending on context there is probably a favorable cutoff.
-
-There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
-
-### The complete loop
-
-`echo_bot.py` puts the pieces together: it listens, endpoints, transcribes, and speaks a reply through Piper. The dialogue policy is deliberately trivial — it repeats what you said — so that everything you notice is a property of the timing rather than the content.
-
-```
-(.venv) $ python echo_bot.py
-```
+<img width="1040" height="622" alt="image" src="https://github.com/user-attachments/assets/465bc0e7-1d4e-4715-a273-223c9485a002" />
+> The 1.5 version record full sentence, allow natural pause. The 0.2 cut off even on normal sentence, might be more suitable for a drink order machine. The 0.7 cut off on natural pause. 1.5 and 0.7 are better for natural dialogue, with 0.7 sounds like a impatient friend.
 
 ## D. Storyboard
 
-Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.)
-
-\*\***Post your storyboard and diagram here.**\*\*
 <img width="3053" height="2292" alt="image" src="https://github.com/user-attachments/assets/7eec1117-758b-4f6f-8fce-8ad80d10e27e" />
 
 <img width="2818" height="2823" alt="image" src="https://github.com/user-attachments/assets/6dd6f48c-dabc-4b7b-b9a8-40915bcf4bb7" />
 
-Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
-
 <img width="4536" height="8064" alt="IMG_6842" src="https://github.com/user-attachments/assets/5e53de0f-cbac-4230-af69-f7b9f63acef8" />
-On occasion of silence, the VAD should wait up to 5 seconds, then the box will speak on its own, asking "is anyone there?".
+
+> On occasion of silence, the VAD should wait up to 5 seconds, then the box will speak on its own, asking "is anyone there?".
 
 ## E. Acting out the dialogue
 
-Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
-
 [video](https://youtu.be/IDa1cwQhbnY)
 
-\*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
-The dialogue diverge from script when the user ask me to explain which planet I am from, this is something that I did not have a response prepared for, so I have to improvise and guide him to say the things that is in the designed flow.
-
-
+> The dialogue diverge from script when the user ask me to explain which planet I am from, this is something that I did not have a response prepared for, so I have to improvise and guide him to say the things that is in the designed flow.
 
 ---
 
@@ -97,23 +42,40 @@ The dialogue diverge from script when the user ask me to explain which planet I 
 
 For Part 2, you will redesign the interaction with the speech-enabled device using the data collected, as well as feedback from part 1.
 
+## Instruction to run the code
+
+`bash
+cd ~/sphinx-share
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-share.txt
+bash speech-scripts/setup.sh
+export DEEPSEEK_API_KEY="<fill your API KEY here>"
+cd speech-scripts
+python3 alien_speak.py
+`
+
 ## Prep for Part 2
-
-1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
-2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
-3. Make a new storyboard, diagram and/or script based on these reflections.
-4. (optional) Integrate [input devices](inputs.md) in the system
-
-## Prototype your system
-
-The system should:
-* use the Raspberry Pi
-* use one or more sensors
-* require participants to speak to it
 
 *Document how the system works.*
 
-*Include videos or screencaptures of both the system and the controller.*
+Storyboard
+<img width="4139" height="3104" alt="Storyboard" src="https://github.com/user-attachments/assets/74d86903-65b2-4200-a006-10f616c8e755" />
+
+Rating of drawings
+<img width="2268" height="4032" alt="IMG_6897" src="https://github.com/user-attachments/assets/b6c0b396-21bf-4dc2-8a01-b5202f191b6d" />
+
+Camera (pointing at the participant) and speaker
+<img width="4536" height="8064" alt="IMG_6898" src="https://github.com/user-attachments/assets/7ef0e65f-cdb3-4e86-b16b-47f69110703d" />
+
+The system take *three* equally spaced screenshot from streaming camera input and feed to the AI along with visual prompt
+<img width="1637" height="1192" alt="Screenshot 2026-10-04 at 9 54 55 PM" src="https://github.com/user-attachments/assets/b880b83f-ef81-4948-83a5-94ffa385870c" />
+
+> User study 1 was done in class with Professor and another teammate. Unfortunately, no footage was recorded.
+> Here is another footage of complete user study showcasing the system and the controller.
+
+[Footage](https://youtube.com/shorts/SsT0dKgCiVU?feature=share)
 
 ## Test the system
 
@@ -122,23 +84,13 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+> The rating interface is straightforward and intuitive. We think the experience of describe-and-draw to a machine is an interesting experience, all participants reflects that being "fun". However, the system prompt and routine is not polished such that there is a limited set of hardcoded question and user can't not ask for more challenge when they complete the three questions. A system that work well should allows more extensive interaction. Also, the rating guideline is not clear such that, user displaying the wrong drawing could still receive high rating.
 
 ### What worked well about the controller and what didn't?
-\*\**your answer here*\*\*
+> The camera work surprisingly well, and the microphone pick up at a larger range than we thought. However, the transcription quality could be improved as we see that a majority of time our voice input is transcribed partially wrong, which is negative toward user experience. The frame rate of camera could be improved so we captured a more information rich footage and enable more natural UX experience. Currently, the system relies on taking three equal-interval (during speech recording) screenshots of the camera input to observe the user.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-\*\**your answer here*\*\*
+> In fact, this system here is fully autonomous! However, We imagined there could be more visual instruction so we don't need to remind the participant what to do, and we design the system with rigid protocol for generating drawing quest and rating guideline so it is not limited to the set of hardcoded question right now. In addition, we think the comment that machine gave could be more characteristic to make the system engaging.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-\*\**your answer here*\*\*
-
-<details>
-  <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
-
-  **Before submitting your README.md:**
-  - This readme.md file has a lot of extra text for guidance.
-  - Remove all instructional text and example prompts from this file.
-  - You may either delete these sections or use the toggle/hide feature in VS Code to collapse them for a cleaner look.
-  - Your final submission should be neat, focused on your own work, and easy to read for grading.
-</details>
+> This system could decompose the video recording into many information: facial expression of user (their emotion toward system's prompt, system's comment on their drawing, are they comfortable engaging with the system), voice recording (what did the user actually say, sentimental analysis, what is their altitude toward the system and the system's feedback on their drawing, is any part of the system's prompt confusing them) and of course, the drawing they make (how was the quality, did they misinterpret the system's prompt, is the system's judgement fair, is the system bias toward certain visual input). Other sensing modalities that is worth capturing is user's gaze trace, which can be achieve via a eye-tracking device. This device would generate a heatmap of where user is gazing on the screen; this is helpful for improving interface design.
