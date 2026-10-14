@@ -286,7 +286,8 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 **Concept: Tipsy Tulip.** A stand for a shot glass with a paper flower that keeps count of your shots by getting "drunk" along with you. Lift the glass, take the shot and put it back, and a distance sensor under the glass counts one shot. A servo tips the flower further with each shot until it flops over at the limit.
 
-![Five sketches](sketches.jpg)
+<img width="1800" height="1300" alt="sketches" src="https://github.com/user-attachments/assets/6c091424-4257-49bb-86aa-47c251a4ef63" />
+
 
 1. **Coaster + counting flag:** distance sensor in a hole in a coaster under the glass, facing up; a servo beside it raises a "CHEERS" flag arm one notch higher with each shot.
 2. **Side tower + cheers arm:** sensor in a cardboard post next to the glass, facing sideways; a servo on top of the post swings an arm holding a mini cardboard glass that "clinks" the real glass after each shot.
