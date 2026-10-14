@@ -17,9 +17,9 @@
 ---
 
 ## Lab Overview
-Team: <canvas group name>  
-Members: Full Name (netid, github-handle), ...  
-Project name: <name>
+
+Members: Arnav Whig aw966
+Project name: ______
 
 
 For lab this week, we focus on both sensing and actuation, bringing new modes of input and output into your devices, while also prototyping the physical structure and overall look of the device. You will consider how the physical form supports sensing and actuation, and how these elements come together to shape the interaction and aesthetics of the device.
@@ -282,12 +282,38 @@ Your kit includes these [SparkFun Qwiic OLED screens](https://www.sparkfun.com/p
 
 
 As you develop your Feast Automata concept, consider where the sensor and actuator need to be placed, what parts move, how electronics are housed, and how the overall form and aesthetics support the interaction.
-
 **\*\*\*Draw 5 sketches that explore different physical arrangements for your sensing and actuation.\*\*\***
+
+**Concept: Tipsy Tulip.** A stand for a shot glass with a paper flower that keeps count of your shots by getting "drunk" along with you. Lift the glass, take the shot and put it back, and a distance sensor under the glass counts one shot. A servo tips the flower further with each shot until it flops over at the limit.
+
+![Five sketches](sketches.jpg)
+
+1. **Coaster + counting flag:** distance sensor in a hole in a coaster under the glass, facing up; a servo beside it raises a "CHEERS" flag arm one notch higher with each shot.
+2. **Side tower + cheers arm:** sensor in a cardboard post next to the glass, facing sideways; a servo on top of the post swings an arm holding a mini cardboard glass that "clinks" the real glass after each shot.
+3. **Bartender buddy:** a cardboard bartender with the sensor in its chest facing the glass; a servo in its shoulder makes it wag a finger harder with each shot.
+4. **Tipsy-meter dial:** sensor in a base under the glass; a servo needle on a cardboard dial moves one tick per shot from "SOBER" to "TIPSY" to "DONE".
+5. **Tipsy tulip:** box base with the sensor under the glass facing up and the Pi + Servo pHAT inside; a paper tulip on a servo at the back corner leans further with each shot and flops over at the limit. A reset button on the front stands it back up.
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
+- Can the distance sensor reliably see a small, clear shot glass through a hole in cardboard? Does a full glass read differently from an empty one? If not, would a white sticker on the bottom of the glass, or a button under the glass, work better?
+- How do I tell a real shot from the glass just being bumped or slid? Should the glass have to be lifted for a couple of seconds and then put back to count?
+- How do I protect the sensor and electronics from spills without blocking the sensor? Would plastic film over the hole work?
+- How many shots before the flower flops over, and how big should each step be so the change is noticeable from across a table?
+- Is a 9g servo strong enough to hold the flower at an angle without sagging, and how do I attach the stem to the servo horn?
+- Is there room in the base for the Pi, Servo pHAT and cables, with the glass still sitting directly over the sensor?
+
+To answer these, I need to physically prototype:
+- the base with the sensor hole, testing real shot glasses (empty and full) over it with `qwiic_distance.py`
+- the tulip on the servo horn, to check it's visible and stays steady at each angle
+
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
+
+I picked **sketch 5, the Tipsy tulip**:
+
+- **It's readable at a glance.** The flower mirrors the drinker, so how far it leans tells you roughly how many shots you've had without reading a number. Flopping over at the limit is a clear "you're done" signal that comes across as a joke rather than a lecture.
+- **The detection should be reliable.** With the sensor directly under the glass, the glass always sits at the same distance from it.
+- **It's mechanically simple.** The whole mechanism is a single servo arm, and the electronics hide inside the base, away from spills.
 
 Build a cardboard or other low-fidelity physical prototype of your design.
 
