@@ -5,7 +5,7 @@
 
 A cup stand with a paper flower that gets "drunk" along with you. Every time you lift the cup, take a shot and put it back, a distance sensor under the cup counts it. The flower leans a little further and starts to sway, and a small screen tells you whether to wait or go ahead. After 4 shots the flower falls over and the screen says **CUT OFF**. Press the button to sober it back up.
 
-<p align="center"><img src="tipsy_tulip_media/acts_like_using_it.gif" width="480" alt="Someone using the Tipsy Tulip"/></p>
+<p align="center"><img src="acts_like_using_it.gif" width="480" alt="Someone using the Tipsy Tulip"/></p>
 
 **Quick links:** [code (`tipsy_tulip.py`)](tipsy_tulip.py) · [interaction diagram](#interaction-diagram) · [videos](#video-of-the-working-prototype) · [looks / works / acts like](#part-f)
 
@@ -24,7 +24,7 @@ I pulled the Lab 4 content from the class repo into my fork and onto my Pi, set 
 | SparkFun Servo pHAT + 9g servo | `pi_servo_hat_test.py` | servo sweeps on channel 0 |
 | SparkFun Qwiic OLED (128x32) | `oled_test.py` | bouncing circle |
 
-[Testing video: sensor readings, button and servo](tipsy_tulip_media/testing_sensor_button_servo.mp4)
+[Testing video: sensor readings, button and servo](testing_sensor_button_servo.mp4)
 
 One thing I learned here: not every example script matches the kit I had. `servo_test.py` drives channel 2 (my servo is on channel 0), `distance_test.py` is for a different laser sensor (VL53L1X), and `qwiic_button_led_demo.py` needs two buttons. Checking `i2cdetect -y 1` (I saw `40`, `60`, `6f`, and later `3c`) was the fastest way to confirm what was actually connected.
 
@@ -69,13 +69,13 @@ I picked **sketch 5, the Tipsy tulip**:
 
 Build plan I worked from (front view, top view, cut-away, and how to attach the flower):
 
-<img src="tipsy_tulip_media/build_plan.jpg" width="800" alt="Tipsy Tulip build plan"/>
+<img src="build_plan.jpg" width="800" alt="Tipsy Tulip build plan"/>
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
 
 | Base: sensor hole, button, servo at the corner | Cup sitting over the sensor | First flower on the servo |
 |---|---|---|
-| <img src="tipsy_tulip_media/prototype_rough_layout.jpg" width="260"/> | <img src="tipsy_tulip_media/prototype_cup_on_sensor.jpg" width="260"/> | <img src="tipsy_tulip_media/prototype_first_flower.jpg" width="320"/> |
+| <img src="prototype_rough_layout.jpg" width="260"/> | <img src="prototype_cup_on_sensor.jpg" width="260"/> | <img src="prototype_first_flower.jpg" width="320"/> |
 
 The base is a shoebox lid with a round hole cut over the distance sensor. The servo is taped at the corner, lying on its side so its shaft points outward. That way the flower **leans side to side** like a clock hand instead of spinning in place. The flower is paper on a long wooden stick, taped to the single-arm servo horn.
 
@@ -126,16 +126,16 @@ python tipsy_tulip.py --screen oled   # calibrate (cup off, press button; cup on
 
 #### Interaction diagram
 
-<img src="tipsy_tulip_media/interaction_diagram.jpg" width="900" alt="Interaction diagram"/>
+<img src="interaction_diagram.jpg" width="900" alt="Interaction diagram"/>
 
 #### Video of the working prototype
 
 | The flower leaning, then flopping | The screen counting, cut-off and reset |
 |---|---|
-| <img src="tipsy_tulip_media/works_like_flower.gif" width="400"/> | <img src="tipsy_tulip_media/works_like_screen_and_reset.gif" width="400"/> |
-| [full video](tipsy_tulip_media/works_like_flower.mp4) | [full video](tipsy_tulip_media/works_like_screen_and_reset.mp4) (GIF is 2x speed) |
+| <img src="works_like_flower.gif" width="400"/> | <img src="works_like_screen_and_reset.gif" width="400"/> |
+| [full video](works_like_flower.mp4) | [full video](works_like_screen_and_reset.mp4) (GIF is 2x speed) |
 
-Someone using it: [full video](tipsy_tulip_media/acts_like_using_it.mp4) (the GIF at the top is 2x speed).
+Someone using it: [full video](acts_like_using_it.mp4) (the GIF at the top is 2x speed).
 
 #### Iterations: what I changed and why
 
@@ -172,27 +172,27 @@ Someone using it: [full video](tipsy_tulip_media/acts_like_using_it.mp4) (the GI
 How it sits on the table: the cup over the sensor, the flower at the corner, and the screen and button at the edge.
 
 <p>
-<img src="tipsy_tulip_media/final_flower_upright.jpg" width="260"/>
-<img src="tipsy_tulip_media/final_layout_with_oled.jpg" width="260"/>
-<img src="tipsy_tulip_media/final_cup_top_view.jpg" width="260"/>
+<img src="final_flower_upright.jpg" width="260"/>
+<img src="final_layout_with_oled.jpg" width="260"/>
+<img src="final_cup_top_view.jpg" width="260"/>
 </p>
 
 #### Works like
 The sensor counts each shot and the flower leans further, then flops at 4. The screen counts and paces, and the button resets.
 
 <p>
-<img src="tipsy_tulip_media/final_flower_leaning.jpg" width="400"/>
-<img src="tipsy_tulip_media/final_flower_flopped.jpg" width="400"/>
+<img src="final_flower_leaning.jpg" width="400"/>
+<img src="final_flower_flopped.jpg" width="400"/>
 </p>
 
-Videos: [flower leaning and flopping](tipsy_tulip_media/works_like_flower.mp4) · [screen counting, cut-off and reset](tipsy_tulip_media/works_like_screen_and_reset.mp4)
+Videos: [flower leaning and flopping](works_like_flower.mp4) · [screen counting, cut-off and reset](works_like_screen_and_reset.mp4)
 
 #### Acts like
 A person sits down, drinks from the cup and puts it back, and the flower and screen react.
 
-<img src="tipsy_tulip_media/acts_like_using_it.gif" width="480"/>
+<img src="acts_like_using_it.gif" width="480"/>
 
-[Full video](tipsy_tulip_media/acts_like_using_it.mp4)
+[Full video](acts_like_using_it.mp4)
 
 **What I'd change next**
 
