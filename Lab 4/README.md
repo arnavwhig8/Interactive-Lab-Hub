@@ -192,7 +192,7 @@ A person sits down, drinks from the cup and puts it back, and the flower and scr
 
 <img src="acts_like_using_it.gif" width="480"/>
 
-[Full video]([acts_like_using_it.mp4]))
+[Full video]([acts_like_using_it.mp4])
 
 **What I'd change next**
 
