@@ -9,7 +9,7 @@ I built it twice. **v1** is the class pipeline almost unchanged, with the langua
 
 **Quick links:** [storyboards](#part-f) · [Verplank diagram](#verplank-diagram) · [v1 → v2](#iteration-v1--v2) · [v2 code (`desk_curfew.py`)](desk_curfew/v2/desk_curfew.py) · [logic (`core.py`)](desk_curfew/core.py) · [run sheet (`SETUP.md`)](desk_curfew/SETUP.md) · [final video](#final-documentation)
 
-**Help and influences.** The pipeline is built on the class starter code (`yolo_to_qwen.py`, `overnight.py`, `morning.py`). The screen and button code is adapted from my Lab 4 project (`tipsy_tulip.py`), and the voice is Piper from Lab 3. Shifeng Hong gave feedback on my first storyboard, which changed the revised one (see Part F). I used Claude (Anthropic) as a coding and writing assistant: it helped write the Desk Curfew scripts and tests, drew the storyboard and Verplank images from my descriptions, and drafted this README, which I then edited and filled with my own results.
+**Help and influences.** The pipeline is built on the class starter code (`yolo_to_qwen.py`, `overnight.py`, `morning.py`). The screen and button code is adapted from my Lab 4 project (`tipsy_tulip.py`), and the voice is Piper from Lab 3. Shifeng Hong gave feedback on my first storyboard, which changed the revised one (see Part F). I used Claude as a coding and writing assistant. I also used it to help me draw some diagrams.
 
 ---
 
