@@ -1,0 +1,47 @@
+{
+  "facts": {
+    "handoff": "2026-11-01T22:42:32",
+    "curfew": "2026-11-01T22:46:00",
+    "reveal": "2026-11-01T22:56:21",
+    "curfew_clock": "10:46pm",
+    "watched_from": "10:42pm",
+    "watched_until": "10:56pm",
+    "sessions": [
+      [
+        "2026-11-01T22:42:36",
+        "2026-11-01T22:47:15"
+      ],
+      [
+        "2026-11-01T22:50:28",
+        "2026-11-01T22:53:31"
+      ]
+    ],
+    "raw_session_count": 2,
+    "session_count": 2,
+    "last_at_desk": "2026-11-01T22:53:31",
+    "last_at_desk_clock": "10:53pm",
+    "minutes_late": 7,
+    "minutes_early": 0,
+    "returns_after_curfew": 1,
+    "minutes_at_desk_after_curfew": 4,
+    "still_there_at_reveal": false,
+    "lights_out_clock": "10:53pm",
+    "watch_gaps": [],
+    "verdict": "late"
+  },
+  "model": "qwen3.5:0.8b",
+  "qwen_answer": "It is 10:53pm and you have been awake for over an hour past your curfew. I know you are tired, but please rest now.",
+  "qwen_seconds": 14.2,
+  "rejected_because": null,
+  "source": "qwen",
+  "looks": 275,
+  "flickers_ignored": {
+    "desk": 1,
+    "light": 0
+  },
+  "sentence": "It is 10:53pm and you have been awake for over an hour past your curfew. I know you are tired, but please rest now.",
+  "screen": [
+    "+7 MIN",
+    "last at desk 10:53pm"
+  ]
+}

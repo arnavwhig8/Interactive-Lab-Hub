@@ -1,0 +1,19 @@
+{"t": "2026-11-01T22:42:32", "event": "handoff", "curfew": "2026-11-01T22:46:00"}
+{"t": "2026-11-01T22:42:36", "desk": "occupied", "light": "on", "people": 1, "conf": 0.85, "tallest": 0.97, "brightness": 97}
+{"t": "2026-11-01T22:43:35", "alive": true, "looks": 21, "brightness": 157}
+{"t": "2026-11-01T22:44:38", "alive": true, "looks": 42, "brightness": 159}
+{"t": "2026-11-01T22:45:39", "alive": true, "looks": 62, "brightness": 159}
+{"t": "2026-11-01T22:46:42", "alive": true, "looks": 83, "brightness": 161}
+{"t": "2026-11-01T22:47:15", "desk": "empty", "light": "on", "people": 0, "conf": 0, "tallest": 0, "brightness": 150}
+{"t": "2026-11-01T22:47:45", "alive": true, "looks": 104, "brightness": 151}
+{"t": "2026-11-01T22:48:48", "alive": true, "looks": 125, "brightness": 151}
+{"t": "2026-11-01T22:49:51", "alive": true, "looks": 146, "brightness": 151}
+{"t": "2026-11-01T22:50:28", "desk": "occupied", "light": "on", "people": 1, "conf": 0.52, "tallest": 0.55, "brightness": 153}
+{"t": "2026-11-01T22:50:52", "alive": true, "looks": 166, "brightness": 148}
+{"t": "2026-11-01T22:51:55", "alive": true, "looks": 187, "brightness": 152}
+{"t": "2026-11-01T22:52:58", "alive": true, "looks": 208, "brightness": 154}
+{"t": "2026-11-01T22:53:31", "desk": "empty", "light": "dark", "people": 0, "conf": 0, "tallest": 0, "brightness": 26}
+{"t": "2026-11-01T22:54:01", "alive": true, "looks": 229, "brightness": 26}
+{"t": "2026-11-01T22:55:02", "alive": true, "looks": 249, "brightness": 26}
+{"t": "2026-11-01T22:56:05", "alive": true, "looks": 270, "brightness": 26}
+{"t": "2026-11-01T22:56:21", "event": "reveal", "looks": 275, "flickers_ignored": 1}

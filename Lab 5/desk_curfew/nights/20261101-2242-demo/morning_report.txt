@@ -1,0 +1,8 @@
+DESK CURFEW  night of Sun Nov 01
+watched 10:42pm to 10:56pm, curfew 10:46pm
+screen:   +7 MIN  /  last at desk 10:53pm
+sentence: It is 10:53pm and you have been awake for over an hour past your curfew. I know you are tired, but please rest now.
+          (from qwen; Qwen took 14.2 s)
+sessions at the desk: 2 (from 2 before merging short breaks)
+flickers ignored by the debouncer: {'desk': 1, 'light': 0}
+looks taken: 275

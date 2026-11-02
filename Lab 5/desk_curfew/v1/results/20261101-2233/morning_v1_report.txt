@@ -1,0 +1,9 @@
+curfew 22:21, set at 22:18, morning at 22:33
+Qwen (qwen3.5:0.8b, 17.3 s): Yes, they went to bed on time by 22:21. They were last at the desk at 22:30:07, which is 59 minutes past 22:21. They came back to the desk three times after that initial visit.
+
+CHECK (worked out in code from the same log):
+  last at the desk:          10:33pm
+  minutes past curfew:       12
+  'returns' after curfew:    5 counting every flicker, 3 if gaps under 1 min are ignored
+  separate visits in log:    6 raw, 4 merged
+  log lines (changes):       14

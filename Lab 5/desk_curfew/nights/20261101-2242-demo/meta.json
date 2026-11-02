@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "handoff": "2026-11-01T22:42:32",
+  "curfew": "2026-11-01T22:46:00",
+  "demo": true,
+  "settings": {
+    "interval": 3,
+    "need": 2,
+    "merge_gap": 30,
+    "morning_grace": 60,
+    "on_time_grace": 0,
+    "step": 1,
+    "lead": 2,
+    "dial_span": 15,
+    "morning_hours": null,
+    "beat": 60,
+    "dial_timeout": 15,
+    "quiet_start": 10,
+    "conf": 0.4,
+    "min_height": 0.3,
+    "dark": 40
+  },
+  "reveal": "2026-11-01T22:56:21",
+  "looks": 275,
+  "flickers_ignored": {
+    "desk": 1,
+    "light": 0
+  }
+}

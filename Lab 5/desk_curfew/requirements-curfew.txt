@@ -1,0 +1,11 @@
+# Extras for Desk Curfew, on top of Lab 5's requirements.txt. Install into the Lab 5 venv:
+#     pip install -r desk_curfew/requirements-curfew.txt
+# Every hardware part is optional: without these, the button falls back to the Enter key
+# and the screen to the terminal.
+Adafruit-Blinka
+lgpio                                 # GPIO on the Pi 5 (Lab 2 needed it too)
+adafruit-circuitpython-rgb-display    # Mini PiTFT (Lab 2)
+adafruit-circuitpython-ssd1306        # Qwiic OLED (Lab 4)
+sparkfun-qwiic-button                 # Qwiic Button (Lab 4)
+matplotlib                            # the morning timeline (usually already there via ultralytics)
+pytest                                # optional: python -m pytest desk_curfew/tests -q

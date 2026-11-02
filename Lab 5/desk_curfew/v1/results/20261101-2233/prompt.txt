@@ -1,0 +1,20 @@
+You are a desk device. Last night at 22:18 the person said they would be in bed by 22:21.
+A camera pointed at their desk chair logged what it saw, one line per change ("nobody" means the chair was empty):
+
+22:18:31 1 person(s) at center/close
+22:21:24 2 person(s) at center/close, left/close
+22:21:29 1 person(s) at center/close
+22:24:06 nobody
+22:25:30 1 person(s) at center/close
+22:25:35 nobody
+22:26:07 1 person(s) at center/close
+22:26:12 nobody
+22:27:24 1 person(s) at center/close
+22:27:30 nobody
+22:28:01 1 person(s) at center/close
+22:30:07 1 person(s) at left/close
+22:30:12 nobody
+22:33:15 1 person(s) at center/close
+
+Did they go to bed on time? Say when they were last at the desk, how many minutes past 22:21 that was,
+and how many times they came back to the desk after 22:21. At most three sentences.
